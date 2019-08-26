@@ -1,0 +1,1 @@
+gcc a.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient

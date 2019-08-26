@@ -1,0 +1,351 @@
+    1  cp CentOS-Base.repo CentOS-Base.repo.backup
+    2  ls
+    3  weget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+    4  wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
+    5  ls
+    6  vi CentOS-Base.repo
+    7  rm CentOS-Base.repo -rf
+    8  mv CentOS-Base-163.repo CentOS-Base.repo
+    9  mv CentOS6-Base-163.repo CentOS-Base.repo
+   10  yum clean all
+   11  yum makecache
+   12  ls
+   13  cd ..
+   14  ls
+   15  cd /home/
+   16  ls
+   17  cd wangshu/
+   18  ls
+   19  cd ..
+   20  cd .
+   21  ls
+   22  yum install gcc
+   23  gcc -version
+   24  gcc -v
+   25  yum install g++
+   26  yum install gcc-c++
+   27  yum -y -install emacs
+   28  emaccs
+   29  emaccs -v
+   30  yum -y install emacs
+   31  emacs -v
+   32  ls
+   33  cd /home/
+   34  ls
+   35  cd wangshu/
+   36  ls
+   37  mkdir myLearn
+   38  ls
+   39  cd myLearn/
+   40  ls
+   41  emacs
+   42  ls
+   43  emacs hello.c
+   44  vim hello.c 
+   45  gcc hello.c 
+   46  ls
+   47  a.o
+   48  ./a.out 
+   49  emacs hello.c 
+   50  vim hello.c
+   51  emacs &
+   52  kill -9 4822
+   53  emacs
+   54  exit
+   55  cd /home/wangshu/
+   56  ls
+   57  cd myLearn/
+   58  ls
+   59  emacs a
+   60  emacs b
+   61  ls
+   62  ps -au 
+   63  clean
+   64  emacs a
+   65  %emacs
+   66  emacs a
+   67  ls
+   68  emacs a~
+   69  ls
+   70  emacs a
+   71  rm a~
+   72  ls
+   73  vim b
+   74  ls
+   75  rm b -f
+   76  ls
+   77  vim b
+   78  rm b -f
+   79  ls
+   80  emacs
+   81  emacs a
+   82  fg
+   83  ema
+   84  cd ..
+   85  ls
+   86  cd ..
+   87  cd /home/
+   88  ls
+   89  cd wangshu/
+   90  ls
+   91  cd myLearn/
+   92  ls
+   93  rm -rff hello.c~
+   94  ls
+   95  emacs
+   96  emacs hello.c 
+   97  emacs
+   98  emacs%
+   99  %emaca
+  100  losf 
+  101  losf -i
+  102  ps -au
+  103  kill -9 49014
+  104  ps -au
+  105  ps -au | grep ema
+  106  kill -9 49433
+  107  ls
+  108  emacs hello.c 
+  109  %emacs
+  110  ls
+  111  emacs a
+  112  cd /home/
+  113  ls
+  114  cd wangshu/
+  115  ls
+  116  cd D
+  117  cd Documents/
+  118  ls
+  119  rz
+  120  rz -E
+  121  **0rz -E
+  122  **yum install rz
+  123  ifconfig
+  124  yum install git
+  125  cd ..
+  126  ls
+  127  cd /home/wangshu/
+  128  ls
+  129  mkdir git
+  130  cd git/
+  131  pwd
+  132  git init
+  133  git
+  134  git config --global user.name "wangshu464113010"
+  135  git config --global user.email "wangshu464113010@outlook.com"
+  136  ssh -keygen -t rsa -C "wangshu464113010@outllok.com"
+  137  ssh-keygen -t rsa -C "wangshu464113010@outllok.com"
+  138  cat /root/.ssh/id_rsa.pub 
+  139  ssh -T git@github.com
+  140  git init
+  141  git add README.md
+  142  ls
+  143  ll
+  144  cd ..
+  145  cd wa
+  146  cd wangshu/
+  147  ls
+  148  mkdir rep
+  149  ls
+  150  cd rep/
+  151  ls
+  152  mkdir a
+  153  cd a
+  154  git init
+  155  ll
+  156  git remote add origin https://github.com/wangshu464113010/test.git
+  157  ls
+  158  git init
+  159  ll
+  160  vim a.c
+  161  ls
+  162  git add a.c
+  163  git commit -m "first commit"
+  164  git push -u orrgin https://github.com/wangshu464113010/test.git
+  165  ls
+  166  git clone https://github.com/wangshu464113010/test.git
+  167  cd ..
+  168  mkdir b
+  169  cd b
+  170  git clone https://github.com/wangshu464113010/test.git
+  171  git clone https://github.com/wangshu464113010/test.git -v
+  172  git clone git@github.com:wangshu464113010/test.git
+  173  ls
+  174  cd test/
+  175  ls
+  176  cd src/
+  177  ls
+  178  cd com/
+  179  ls
+  180  cd a/
+  181  ls
+  182  cd a
+  183  ls
+  184  emacs Ajax.java 
+  185  cd ..
+  186  pwd
+  187  ll
+  188  cd b/
+  189  ls
+  190  vim dsa.java 
+  191  git commit -m "xiugai"
+  192  git add ../a/Ajax.java 
+  193  git commit -m "xiugai"
+  194  git push 
+  195  ls
+  196  vim A.java
+  197  ls
+  198  git add A.java 
+  199  git commit -m "A.java"
+  200  git push
+  201  cd ..
+  202  cd /home/wangshu/Documents/
+  203  ls
+  204  tar -zvfx newProject.tar.gz 
+  205  tar -zvf newProject.tar.gz 
+  206  tar -xzvf newProject.tar.gz 
+  207  ls
+  208  cd newProject
+  209  ls
+  210  cd ..
+  211  ls
+  212  cd newProject
+  213  git init
+  214  git add
+  215  git add .
+  216  git commit -m "first commit"
+  217  cd ..
+  218  cd /home/wangshu/
+  219  ls
+  220  cd myLearn/
+  221  ls
+  222  rm -f a~
+  223  ls
+  224  yum install mysql
+  225  mysql
+  226  mysql -uroot -p123456
+  227  rpm -qa|grep -i mysql
+  228  yum -y remove mysql-5.1.73-8.el6_8.x86_64
+  229  rpm -qa|grep -i mysql
+  230  yum -y remove mysql-libs-5.1.73-8.el6_8.x86_64
+  231  rpm -qa|grep -i mysql
+  232  emac
+  233  emacs
+  234  yum install gcc-c++
+  235  yum list |grep mysql
+  236  yum install mysql-community-server
+  237  ls
+  238  cd /usr/
+  239  ls
+  240  yum |grep mysql
+  241  rpm -qa|grep -i mysql
+  242  yum -y install mysql
+  243  vi /etc/my.cnf
+  244  service mysqld restart
+  245  grep "password: /var/log/mysqld.log
+  246  grep "password: /var/log/mysqld.log"
+  247  grep "password" /var/log/mysqld.log
+  248  yum list |grep mysql
+  249  rpm -qa|grep -i mysql
+  250  yum -y remove mysql-5.1.73-8.el6_8.x86_64
+  251  yum -y remove mysql-libs-5.1.73-8.el6_8.x86_64
+  252  wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+  253  yum -y install mysql57-community-release-el7-10.noarch.rpm
+  254  yum list mysql*
+  255  rm -rf /var/lib/mysql
+  256  rm /etc/my.cnf
+  257  rpm -qa|grep mysql
+  258  yum install -y mysql-server
+  259  yum install -y mysql-devel
+  260  cd /etc/
+  261  ls
+  262  vim my.cnf 
+  263  service mysqld start
+  264  chkconfig --add mysqld
+  265  chkconfig mysqld on
+  266  chkconfig  --list | grep mysql*
+  267  mysql -uroot -p
+  268  cd /home/wangshu/
+  269  ls
+  270  cd myLearn/
+  271  ls
+  272  emacs b.c
+  273  vim b.c
+  274  yum list | grep mysql
+  275  yum install -y mysql-devel.i686
+  276  cd /var/
+  277  ls
+  278  cd lib/
+  279  ls
+  280  cd mysql/
+  281  ls
+  282  cd a
+  283  ls
+  284  cd ..
+  285  cd mysql
+  286  ls
+  287  cd ..
+  288  ls
+  289  cd ..
+  290  ls
+  291  cd /home/wangshu/myLearn/
+  292  ls
+  293  ls /app
+  294  ls /
+  295  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  296  vim b.c
+  297  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  298  ls
+  299  mian.out
+  300  ./main.out 
+  301  vim b.c
+  302  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  303  ./main.out 
+  304  vim b.c
+  305  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql
+  306  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  307  ./main.out 
+  308  vim b.c
+  309  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  310  ./main.out 
+  311   skipping incompatible /usr/lib/mysql/libmysqlclient.so when searching for -lmysqlclient
+  312  emacs command
+  313  ls
+  314  vim b.c
+  315   skipping incompatible /usr/lib/mysql/libmysqlclient.so when searching for -lmysqlclient
+  316  gcc b.c -o main.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  317  ./main.out 
+  318  vim b.c
+  319  vim c.c
+  320  gcc c.c -o c.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  321  ./c
+  322  ./c.out 
+  323  emacs c.c
+  324  gcc c.c -o c.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  325  ./c.out 
+  326  mysql
+  327  mysql -uroot -p
+  328  emacs c.c
+  329  gcc c.c -o c.out -I/usr/include/mysql -L/usr/lib/mysql -L/usr/lib64/mysql -lmysqlclient
+  330  ./c.out 
+  331  cd /usr/
+  332  ls
+  333  cd include/
+  334  ls
+  335  cd mysql/
+  336  ls
+  337  cd ..
+  338  ls
+  339  cd l
+  340  cd lib
+  341  ls
+  342  cd ma
+  343  cd mysql/
+  344  ls
+  345  cd ..
+  346  cd lib64/
+  347  ls
+  348  cd ..
+  349  ls
+  350  cd /home/wangshu//myLearn/
+  351  history > myhistory
