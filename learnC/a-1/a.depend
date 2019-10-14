@@ -1,0 +1,73 @@
+# depslib dependency file v1.0
+1571040353 source:d:\2345downloads\a\main.c
+	<stdio.h>
+	<stdlib.h>
+	"linkList.h"
+	"domain.h"
+	"string_utils.h"
+	<winsock2.h>
+	<mysql.h>
+
+1569211113 source:d:\2345downloads\a\linklist.c
+	"linkList.h"
+
+1571018801 d:\2345downloads\a\linklist.h
+
+1570777720 source:d:\2345downloads\a\domain.c
+	"domain.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1568950924 d:\2345downloads\a\domain.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql.h
+	<stdbool.h>
+	<stddef.h>
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"field_types.h"
+	"my_list.h"
+	"mysql_com.h"
+	"mysql/client_plugin.h"
+	"mysql_version.h"
+	"mysql_time.h"
+	"errmsg.h"
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\field_types.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\my_list.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql_com.h
+	<stdbool.h>
+	"my_command.h"
+	"my_io.h"
+	<stdbool.h>
+	<mysql/udf_registration_types.h>
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\my_command.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql\udf_registration_types.h
+	<stdbool.h>
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1561584143 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql_version.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\mysql_time.h
+
+1561458210 d:\mysql-8.0.17-winx64\mysql-8.0.17-winx64\include\errmsg.h
+
+1571038267 source:d:\2345downloads\a\string_utils.c
+	<stdio.h>
+	<string.h>
+
+1571035396 d:\2345downloads\a\string_utils.h
+
