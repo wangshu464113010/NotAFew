@@ -5,7 +5,7 @@
 MYSQL my_connection;
 MYSQL_RES *res_ptr;
 MYSQL_ROW sqlrow;
-// c语言连接MySQL数据库
+// c语言连接MySQL数据库,操作系统linux
 int main(int argc,char *argv[]){
     int res;
     mysql_init(&my_connection);
