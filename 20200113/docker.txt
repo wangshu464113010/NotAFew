@@ -1,0 +1,11 @@
+docker安装
+sudo yum install -y http://mirrors...rpm
+sudo yum install -y docker-io
+(CentOS6)
+CentOS7
+sudo yum install -y docker
+启动docker
+sudo systemctl start docker
+
+
+
