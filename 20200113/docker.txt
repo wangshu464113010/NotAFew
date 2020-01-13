@@ -7,5 +7,135 @@ sudo yum install -y docker
 启动docker
 sudo systemctl start docker
 
+sudo docker pull ubuntu 
+下载最新的ubuntu镜像
+sudo docker pull ubuntu:14.04
+下载版本号为14.04的ubuntu镜像（参考书中ubuntu的最新版本14.04）
+上面两条命令相当于：sudo docker pull registry.hub.docker.com/ubuntu:latest
+从默认服务器registry.hub.docker.com中的ubuntu仓库来下载标记为latest的镜像
+也可以从其他服务器上下载
+
+使用镜像
+sudo docker run -t -i ubuntu /bin/bash
+利用镜像创建一个容器，在其中运行bash
+查看镜像信息
+docker images
+repository：来自哪一个仓库，ubuntu仓库
+tag：标签信息，14.04
+image id：镜像的id号，唯一
+created：创建时间
+size：镜像大小
+
+tag信息用于标记来自同一个仓库的不同镜像，例如：
+ubuntu仓库有多个镜像，通过tag信息来区分不同的发行版本，
+可以使用docker tag命令为本地镜像添加新的标签。
+sudo docker tag dl.dockerpool.com:5000/ubuntu:latest ubuntu:latest
+使用docker inspect命令查看镜像的详细信息
+docker inspect [image id]
+该命令返回一个JSON格式的信息
+可以使用-f参数指定一个需要查看的信息
+如：docker inspect -f {{".Architecture}} [image id]
+[指定镜像id时，通常使用改id的前若干个字符组成的可区分字符串替代完整的id]
+
+搜寻镜像
+docker search
+支持的参数
+--automates=false 仅显示自动创建的镜像
+--no-trunc=false 输出信息不截断显示
+-s ，--stars=0 指定仅显示评价为指定星级以上的镜像
+如：docker search mysql
+
+删除镜像
+docker rmi
+命令格式：docker rmi image [image...] 
+其中image可以是标签，也可以是id
+如：删除掉dl.dockerpool.com:5000/ubuntu:latest镜像
+docker rmi dl.dockerpool.com:5000/ubuntu:latest
+【本地的ubuntu:latest镜像不会收到此命令的影响。当同一个镜像拥有多个标签的时候，
+docker rmi命令只是删除了该镜像多个标签中的指定标签，并不会影响镜像文件】
+当只剩下要给标签的时候，删除该镜像，才会删除该镜像
+【当该镜像创建的容器存在的时候，镜像文件默认是无法被删除】
+可以使用-f参数强行删除
+sudo docker rmi -f ubuntu
+
+sudo docker run ubuntu echo "Hello World"
+
+查看本机上存在的所有镜像
+docker ps -a
+
+创建镜像
+1.基于已有镜像的容器创建
+2.基于本地模板导入
+3.基于Dockerfile创建
+
+1.基于已有镜像的容器创建
+docker commit [options] container [repository[:tag]]
+-a,--author=""作者信息
+-m,--message="" 提交信息
+-p,--pause=true提交时暂停容器运行
+如：docker commit -m 'commit file' -a "" oldImageId newImageRepository
+
+2.基于本地模板导入，需要先下载模板压缩包
+sudo cat ubuntu-14.04-x86_64-minimal.tar.gz |docker import -ubuntu:14.04 
+
+存出和载入镜像
+docker save和docker load
+存出镜像到本地文件 
+docker save -o ubuntu_14.04.tar ubuntu:14.04
+载入镜像
+docker load --input ubuntu_14.04.tar
+或者 docker load < ubuntu_14.04.tar
+
+上传镜像
+docker push
+默认上传到dockerHub官方仓库
+docker push name[:tag]
+docker push user/test:latest
+
+容器
+创建容器
+docker creat -ti ubuntu:latest
+可以使用start命令启动
+docker start
+新建并启动
+docker run ubuntu /bin/bash
+
+启动一个bash终端，允许用户进行交互
+docker run -ti ubuntu:14.04 /bin/bash
+-t 让docker分配一个伪终端(pseudo-tty)并绑定到容器的标准输入上，
+-i 让容器的标准输入保持打开
+
+Ctrl+d或exit退出容器
+容器自动处于终止状态
+
+守护状态运行Daemonized
+参数 -d
+docker run -d ubuntu /bin/sh -c "while true; do echo hello world;sleep 1;done"
+获取容器的输出信息，docker logs命令
+docker logs containerId
+
+终止容器
+docker stop来终止一个运行中的容器，命令的格式为docker stop [-t|--time[=10]]。
+它会首先向容器发送SIGTERM信号，等待一段时间后（默认为10秒），再发送SIGKILL信号终止容器
+docker stop 3d
+docker kill 命令会直接发送sigkill信号来强行终止容器
+
+docker ps -a -q 可以看到处于终止状态的容器的id信息
+处于终止状态的容器可以通过docker start 来重新启动容器
+restart是重启
+
+进入容器
+使用-d参数后，容器启动无法进入后台
+可以使用docker attach，docker exec，nsenter工具
+
+
+
+
+
+
+
+
+
+
 
 
